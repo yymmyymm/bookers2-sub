@@ -4,12 +4,22 @@
   <li>
     <%= link_to '投稿フォーム', new_book_path %>
   </li>
+  
+  
 
   <% @books.each do |book| %>
-<div>
 
-  <p>Title：<%= book.title %></p>
-  <p>Option：<%= book.body %></p>
+  <div>
+    <%= image_tag book.get_image %>
+    <p>投稿ユーザー画像：<%= image_tag 'no_image.jpg' %></p>
+    <p>Title：<%= book.title %></p>
+    <p>Option：<%= book.body %></p>
 
-</div>
-<% end %>
+  <% end %>
+
+
+
+
+
+
+  </div>
