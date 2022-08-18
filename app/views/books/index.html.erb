@@ -4,8 +4,6 @@
    <%= render 'books/list', user: @user, book: @book %>
     <div class="col-md-8 offset-md-1">
 
-     <p> <%= notice %></p>
-
      <% if @book.errors.any? %>
      <%= @book.errors.count %>errors prohibited this obj from being saved:
      <ul>
@@ -14,9 +12,6 @@
       <% end %>
       </ul>
      <% end %>
-
-
-
 
       <h2>Books</h2>
 
@@ -33,8 +28,8 @@
             <tbody>
               <tr>
                 <td>
-                 <%= link_to user_path(@user.id) do %>
-                 <%= image_tag @user.get_profile_image(100,100) %>
+                 <%= link_to user_path(book.user.id) do %>
+                 <%= image_tag book.user.get_profile_image(100,100) %>
                  <% end %>
                 </td>
                 <td>
