@@ -39,26 +39,33 @@
         <li class="nav-item">
           <%= link_to "Books" , books_path %>
         </li>
+
         <li class="nav-item">
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </li>
 
         <% else %>
+
         <li class="nav-item">
         <%= link_to root_path do %>
-        <i class="fas fa-house"></i>Home
+        <i class="fas fa-home"></i>Home
         <% end %>
+
         </li>
         <li class="nav-item">
-          <%= link_to "About" , "about" %>
+          <%= link_to "About" , homes_about_path %>
         </li>
+
         <li class="nav-item">
           <%= link_to "Sign in", new_user_registration_path %>
         </li>
+
         <li class="nav-item">
           <%= link_to "Log in", new_user_session_path %>
         </li>
+
         <% end %>
+
         </ul>
       </div>
       </div>
